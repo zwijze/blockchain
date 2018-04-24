@@ -7,6 +7,7 @@ import java.security.Security;
 import java.util.ArrayList;
 
 import java.util.Base64;
+import java.util.HashMap;
 
 import com.google.gson.GsonBuilder;
 
@@ -16,7 +17,11 @@ public class Noobchain {
 
 	
 
+	public static final float minimumTransaction = 1;
+
 	public static ArrayList<Block> blockchain = new ArrayList<Block>();
+
+	public static HashMap<String,TransactionOutput> UTXOs = new HashMap<String,TransactionOutput>(); //list of all unspent transactions. 
 
 	public static int difficulty = 5;
 
